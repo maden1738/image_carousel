@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Image Carousel</title>
+     </head>
+     <body>
+          <form action="" class="form">
+               <h2>Configure carousel settings</h2>
+               <input
+                    type="number"
+                    id="transition_time"
+                    placeholder="Transition time (ms)"
+                    required="true"
+               />
+               <input
+                    type="number"
+                    id="hold_time"
+                    placeholder="Hold Time (ms)"
+                    required="true"
+               />
+               <button type="submit" class="update-button">Update</button>
+          </form>
+          <main>
+               <div class="carousel-container">
+                    <button class="prev-button">&lt;</button>
+                    <button class="next-button">&gt;</button>
+                    <div class="carousel-image-wrapper">
+                         <img src="/hanni.jpg" alt="Image" class="images" />
+                         <img src="/tzuyu.jpg" alt="Image" class="images" />
+                         <img src="/jihyo.jpg" alt="Image" class="images" />
+                         <img src="/sana.jpg" alt="Image" class="images" />
+                         <img src="/tzuyu1.jpg" alt="Image" class="images" />
+                         <img src="/sana1.jpg" alt="Image" class="images" />
+                    </div>
+               </div>
+          </main>
+          <script type="module" src="/src/main.ts"></script>
+     </body>
+</html>

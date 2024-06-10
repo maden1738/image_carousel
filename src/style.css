@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+     --image-width: 760px;
+}
+
+body {
+     color: #fafafa;
+     font-family: "Nunito Sans", sans-serif;
+     background-color: black;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.form {
+     padding-top: 70px;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     align-items: center;
+}
+
+h2 {
+     margin: 0;
+     padding: 0;
+}
+
+button {
+     background: transparent;
+     border: none;
+     color: #cfcfcd;
+
+     cursor: pointer;
+}
+
+.form input {
+     color: #fafafa;
+     box-sizing: border-box;
+     border: 1px solid #262629;
+     background: transparent;
+     padding: 4px 8px;
+}
+
+main {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+}
+
+.update-button {
+     padding: 5px 10px;
+     border-radius: 10px;
+     background-color: #cfcfcd;
+     color: #563440;
+}
+
+.prev-button,
+.next-button {
+     font-size: 2rem;
+
+     position: absolute;
+     width: fit-content;
+     top: 50%;
+     transition: color 0.2s ease-in;
+     z-index: 1;
+}
+
+.prev-button:hover,
+.next-button:hover {
+     color: #994984;
+}
+
+.next-button {
+     left: calc(var(--image-width) - 2rem);
+}
+
+.carousel-container {
+     position: relative;
+     width: var(--image-width);
+     margin-top: 100px;
+     height: fit-content;
+     overflow: hidden;
+     border-radius: 20px;
+     box-shadow: rgba(148, 148, 187, 0.1) 17px 35px 24px,
+          rgba(182, 18, 185, 0.175) 0px 16px 56px,
+          rgba(210, 40, 167, 0.1) 0px 24px 80px;
+}
+
+.carousel-image-wrapper {
+     width: var(--image-width);
+     display: flex;
+     left: 0;
+     position: relative;
+}
+
+.carousel-image-wrapper > img {
+     width: var(--image-width);
+}
+
+@media screen and (max-width: 768px) {
+     body {
+          --image-width: 350px;
+     }
+}
