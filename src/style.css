@@ -98,7 +98,7 @@ main {
      width: var(--image-width);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 765px) {
      body {
           --image-width: 350px;
      }

@@ -18,8 +18,9 @@ const form = document.querySelector(".form")!;
 
 form.addEventListener("submit", (event) => {
      event.preventDefault();
+     alert("Updated");
      TRANSITION_TIME = (event.target as HTMLFormElement).transition_time.value;
-     wrapper.style.transition = `left ${TRANSITION_TIME}ms ease-in-out`;
+     wrapper.style.transition = `left ${TRANSITION_TIME}ms ease-in-out`; // updating transition time as per input field
      HOLD_TIME = (event.target as HTMLFormElement).hold_time.value;
 });
 
@@ -38,10 +39,10 @@ carouselContainer.appendChild(dotsContainer);
 for (let i = 0; i < images.length; i++) {
      const dot = document.createElement("div");
      dot.setAttribute("class", "dot");
-     dot.setAttribute("id", `dot-${String(i)}`);
+     dot.setAttribute("id", `dot-${String(i)}`); // first dot will have id 'dot-0'
      dot.setAttribute(
           "style",
-          "width: 0.75rem; background-color: rgb(220, 211, 211); height: 0.75rem;border-radius: 50%; cursor: pointer; transition: all 0.5s ease-out"
+          "width: 0.6rem; background-color: rgb(220, 211, 211); height: 0.6rem;border-radius: 50%; cursor: pointer; transition: all 0.5s ease-out"
      );
      dot.addEventListener("click", () => {
           clearInterval(intervalId); // reset slideshow timer
@@ -70,7 +71,7 @@ function updateCarousel() {
      dotsArr.forEach((dot) => {
           if (dot.id === presentDot.id) {
                dot.style.background = "#994984";
-               dot.style.scale = "1.4";
+               dot.style.scale = "1.6";
           } else {
                dot.style.background = "#FFF";
                dot.style.scale = "1";
@@ -98,7 +99,7 @@ function prev() {
 }
 
 function next() {
-     clearInterval(intervalId);
+     clearInterval(intervalId); // slideshow timer is reset
 
      if (currentImageIndex < images.length - 1) {
           currentImageIndex++;
